@@ -619,6 +619,7 @@ GameObject:
   - component: {fileID: 297217773}
   - component: {fileID: 297217774}
   - component: {fileID: 297217775}
+  - component: {fileID: 297217776}
   m_Layer: 0
   m_Name: CoreWepon
   m_TagString: Untagged
@@ -736,11 +737,46 @@ MonoBehaviour:
   floatDistans: 0.2
   owner: {fileID: 1047629034}
   FixedFloatPosition: {x: -0.45, y: 0.55}
-  ownerRb: {fileID: 0}
-  EffectDistance: 0
-  Damage: 0
+  EffectDistance: 50
+  Damage: 50
+  CheckCycle: {fileID: 0}
   level: 0
   animator: {fileID: 0}
+--- !u!70 &297217776
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297217771}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 6, y: 6}
+  m_Direction: 0
 --- !u!1 &337279209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1547,7 +1583,7 @@ ParticleSystem:
     m_TextureColorAffectsParticles: 1
     m_TextureAlphaAffectsParticles: 1
     m_TextureBilinearFiltering: 0
-    randomDirectionAmount: 0
+    randomDirectionAmount: 1
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
@@ -1938,7 +1974,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   RotationModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -6087,7 +6123,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -376.75003, y: 204.75}
+  m_AnchoredPosition: {x: -332.75, y: 207}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &608095076
@@ -6737,7 +6773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1075506029
 Transform:
   m_ObjectHideFlags: 0
@@ -7531,7 +7567,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   m_LegacyBlendHint: 0
-  m_ComponentOwner: {fileID: 0}
+  m_ComponentOwner: {fileID: 1292266085}
 --- !u!4 &1744576664
 Transform:
   m_ObjectHideFlags: 0
