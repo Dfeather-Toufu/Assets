@@ -2,14 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public interface ICoreWeponsStates
+{
+    void OnEnable();
+    void Update();
+    void FixedUpdate();
+    void OnDisable();
+}
 public class CoreWeponBase : MonoBehaviour
 {
-    [SerializeField] protected GameObject owner;
     public float floatDistans;
+    [SerializeField] protected GameObject owner;
     [SerializeField]protected Vector2 FixedFloatPosition;
+    [SerializeField] protected Rigidbody2D ownerRb;
     private Rigidbody2D rb;
     private float timer;
-    [SerializeField]protected Rigidbody2D ownerRb;
     public virtual void Awake_Func()
     {
         timer = 0;
