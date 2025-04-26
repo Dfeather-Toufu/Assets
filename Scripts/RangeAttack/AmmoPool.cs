@@ -15,6 +15,10 @@ public class AmmoPool : MonoBehaviour
             ammoList.Add(temp);
         }
     }
+    /// <summary>
+    /// 将子弹存入池
+    /// </summary>
+    /// <param name="getin"></param>
     public void GetInToPool_Fun(GameObject getin)
     {
         if(ammoList.Count>=200)
@@ -27,6 +31,15 @@ public class AmmoPool : MonoBehaviour
             getin.SetActive(false);
         }
     }
+    /// <summary>
+    /// 获取子弹
+    /// </summary>
+    /// <param name="speed"></param>
+    /// <param name="toQua"></param>
+    /// <param name="beginPosition"></param>
+    /// <param name="existTime"></param>
+    /// <param name="size"></param>
+    /// <returns></returns>
     public GameObject GetOutPool(float speed, Quaternion toQua, Vector3 beginPosition, float existTime, float size)
     {
         GameObject temp;
