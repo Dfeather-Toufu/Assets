@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class EleDisturb : CoreWeponBase
 {
+    public float EffectDistance;
+    public float Damage;
+    [HideInInspector] public int level;
 
 }
