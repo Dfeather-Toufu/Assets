@@ -63,6 +63,9 @@ public class EleNormal : ICoreWpeonsStateMacine
 
     public void Update()
     {
-        
+        if(Input.GetKey(ControllerPerfence.A1)||Input.GetMouseButton(ControllerPerfence.A1mousenumber))
+        {
+            Ele.StatesTrans_Func(EleDisturb.States.Fire);
+        }
     }
 }
