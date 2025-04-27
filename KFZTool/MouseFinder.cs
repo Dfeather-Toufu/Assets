@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MouseFinder : MonoBehaviour
 {
@@ -11,6 +12,6 @@ public class MouseFinder : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rb.position = Camera.current.ScreenToWorldPoint(Input.mousePosition);
+        rb.position = Camera.current.ScreenToWorldPoint(Mouse.current.position.ReadValue());
     }
 }
